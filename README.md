@@ -11,6 +11,8 @@ BD - Bases de Dados
 
 ## PLs / Exercícios
 
+* PostgreSQL
+
 
 
 ## Autores:
