@@ -1,0 +1,3 @@
+SELECT DISTINCT funcao "FUNCAO"
+	FROM emp
+;

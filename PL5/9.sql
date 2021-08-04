@@ -1,0 +1,11 @@
+CREATE TABLE emp2
+	(nemp NUMERIC(4) CONSTRAINT pk_emp PRIMARY KEY,
+	nome VARCHAR(20) CONSTRAINT nn_nome NOT NULL
+		CONSTRAINT upper_nome CHECK (nome = UPPER(nome)),
+	funcao VARCHAR(12),
+	encar NUMERIC CONSTRAINT fk_encar REFERENCES emp2(nemp),
+	data_entrada DATE DEFAULT CURRENT_DATE,
+	sal NUMERIC(7) CONSTRAINT ck_sal CHECK (sal>70000),
+	premios NUMERIC(7) DEFAULT NULL,
+	ndep NUMERIC(2) CONSTRAINT nn_dep NOT NULL
+		CONSTRAINT fk_ndep REFERENCES dep(ndep));
